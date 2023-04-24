@@ -1,0 +1,8 @@
+services:
+  - name: my-telegram-bot
+    env:
+      BOT_TOKEN: your_bot_token_here
+      STRIPE_SECRET_KEY: your_stripe_secret_key_here
+      ADMIN_USERNAME: your_admin_username_here
+    buildCommand: docker build -t my-telegram-bot .
+    startCommand: docker run -p 8080:8080 my-telegram-bot
